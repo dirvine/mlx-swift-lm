@@ -910,7 +910,7 @@ public class Qwen25VL: Module, VLMModel, KVCacheDimensionProvider {
 // MARK: - Configuration
 
 /// Configuration for ``Qwen25VL``
-public struct Qwen25VLConfiguration: Sendable {
+public struct Qwen25VLConfiguration: Codable, Sendable {
 
     @Codable
     public struct TextConfiguration: Sendable {
