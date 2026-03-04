@@ -952,7 +952,7 @@ public struct Qwen25VLConfiguration: Codable, Sendable {
     }
 
     @Codable
-    public struct BaseConfiguration: Codable, Sendable {
+    public struct BaseConfiguration: Sendable {
         @CodingKey("model_type") public var modelType: String
         @CodingKey("vocab_size") public var vocabularySize: Int
         @CodingKey("image_token_id") public var imageTokenId: Int
