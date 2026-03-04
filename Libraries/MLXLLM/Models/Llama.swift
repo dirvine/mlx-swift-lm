@@ -351,7 +351,7 @@ public struct LlamaConfiguration: Sendable {
     @CodingKey("head_dim") public var headDimensions: Int?
     @CodingKey("rms_norm_eps") public var rmsNormEps: Float
     @CodingKey("vocab_size") public var vocabularySize: Int
-    @CodingKey("num_key_value_heads") public var kvHeads: Int
+    @CodingKey("num_key_value_heads", "num_attention_heads") public var kvHeads: Int
     @CodingKey("max_position_embeddings") public var maxPositionEmbeddings: Int?
     @CodingKey("rope_theta") public var ropeTheta: Float = 10_000
     @CodingKey("rope_traditional") public var ropeTraditional: Bool = false

@@ -31,7 +31,7 @@ public struct Idefics3Configuration: Sendable {
         @CodingKey("rms_norm_eps") public var rmsNormEps: Float
         @CodingKey("vocab_size") public var vocabSize: Int
         @CodingKey("num_key_value_heads") public var numKeyValueHeads: Int
-        @CodingKey("rope_theta") public var ropeTheta: Float
+        @CodingKey("rope_theta") public var ropeTheta: Float = 1000000.0
         @CodingKey("rope_traditional") public var ropeTraditional: Bool = false
         @CodingKey("tie_word_embeddings") public var tieWordEmbeddings: Bool = false
     }
@@ -44,7 +44,7 @@ public struct Idefics3Configuration: Sendable {
         @CodingKey("intermediate_size") public var intermediateSize: Int = 3072
         @CodingKey("num_attention_heads") public var numAttentionHeads: Int
         @CodingKey("patch_size") public var patchSize: Int
-        @CodingKey("image_size") public var imageSize: Int
+        @CodingKey("image_size") public var imageSize: Int = 224
         @CodingKey("num_channels") public var numChannels: Int = 3
         @CodingKey("layer_norm_eps") public var layerNormEps: Float = 1e-6
     }
@@ -52,7 +52,7 @@ public struct Idefics3Configuration: Sendable {
     @CodingKey("text_config") public var textConfig: TextConfiguration
     @CodingKey("vision_config") public var visionConfig: VisionConfiguration
     @CodingKey("model_type") public var modelType: String
-    @CodingKey("ignore_index") public var ignoreIndex: Int = -10
+    @CodingKey("ignore_index") public var ignoreIndex: Int = -100
     @CodingKey("vocab_size") public var vocabSize: Int = 128259
     @CodingKey("scale_factor") public var scaleFactor: Int = 2
     @CodingKey("image_token_id") public var imageTokenId: Int = 49153
