@@ -83,6 +83,7 @@ jobs:
         run: xcodebuild -showComponent MetalToolchain
 
       - name: Build (Xcode, macOS)
+        # note skipMacroValidation causes CI to trust the codable macros
         shell: sh
         run: |
           xcodebuild -version
